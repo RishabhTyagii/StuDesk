@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Verify OTP | StudeskPro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css_files/verify_otp.css' %}">  
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+          <img src="{%static 'media/logo.png'%}" alt="logo">
+          <h1>Study Smarter Not Harder💀</h1>
+        </div>
+    </div>
+    <!-- OTP Form -->
+    <div class="otp-container">
+        <h2>Enter OTP</h2>
+
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="otp" placeholder="Enter OTP">
+            <button type="submit">Verify</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2025 StudeskPro. All rights reserved.<br>
+        <strong>Developed by Rishabh Tyagi</strong>
+    </footer>
+
+</body>
+</html>

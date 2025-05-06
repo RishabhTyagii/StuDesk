@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | StudeskPro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css_files/login.css' %}">  
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+          <img src="{%static 'media/logo.png'%}" alt="logo">
+          <h1>Study Smarter Not Harder 💀</h1>
+        </div>
+       
+      </div>
+
+    <!-- Login Section -->
+    <header>
+         StudeskPro - Empowering Student Learning
+    </header>
+
+    <div class="login-container">
+        <h2>Login</h2>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2025 StudeskPro. All rights reserved. <br>
+        <strong>Developed By: Rishabh Tyagi</strong>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-3gJwYp4gC6ZfVs0VV5Yx1f0XCkri+5ivnh8ZKQfZV9E=" crossorigin="anonymous"></script>
+</body>
+
+</html>

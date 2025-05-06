@@ -1,0 +1,337 @@
+{% include "header.html" %}
+    <div class="section">
+
+      <!-- BTech -->
+      <div class="stream-box" id="btech">
+        <h2><i class="fas fa-laptop-code"></i> BTech Resources</h2>
+        <div class="tabs">
+          <button class="tab-btn" data-target="#btech-exams">Exam Papers</button>
+          <button class="tab-btn" data-target="#btech-notes">Notes</button>
+          <button class="tab-btn" data-target="#btech-quantum">Quantum Papers</button>
+          <button class="cls-btn"><i class="fa-solid fa-square-xmark"></i></button>
+
+        </div>
+
+        <table class="resource-table" id="btech-exams">
+          <thead>
+              <tr>
+                <th scope="col">Subject Code</th>
+                <th scope="col">Subject Name</th>
+                <th scope="col">Course</th>
+                <th scope="col">Semester</th>
+                <th scope="col">PDF & Provider</th>
+
+              </tr>
+              </thead>
+              <tbody>
+              {% for i in BTechExam_paper %}
+              
+              <tr>
+                <td scope="row">{{ i.SubjectCode }}</td>
+                <td class="Subject-name" >{{ i.SubjectName }}</td>
+                <td>{{ i.Branch }}</td>
+                <td>{{ i.Semester }}</td>
+                <td> <p class="pdf-upload">{{ i.provider }}</p><a href="{{ i.pdf.url }}" download>Download</a></td>
+              
+              </tr>
+              {% endfor %}
+              
+              </tbody>
+        </table>
+
+        <table class="resource-table" id="btech-notes">
+          <thead>
+              <tr>
+                <th scope="col">Subject Code</th>
+                <th scope="col">Subject Name</th>
+                <th scope="col">Course</th>
+                <th scope="col">Semester</th>
+                <th scope="col">PDF & Provider</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in BTechNotes1 %}
+          
+              <tr>
+                <td scope="row">{{ i.SubjectCode }}</td>
+                <td class="Subject-name" >{{ i.SubjectName }}</td>
+                <td>{{ i.Branch }}</td>
+                <td>{{ i.Semester }}</td>
+                <td> <p class="pdf-upload">{{ i.provider }}</p><a href="{{ i.pdf.url }}" download>Download</a></td>
+          
+              </tr>
+              {% endfor %}
+          
+            </tbody>
+        </table>
+
+        <table class="resource-table" id="btech-quantum">
+          <thead>
+              <tr>
+                <th scope="col">Subject Code</th>
+                <th scope="col">Subject Name</th>
+                <th scope="col">Course</th>
+                <th scope="col">Semester</th>
+                <th scope="col">PDF & Provider</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in BTechQuantum1 %}
+        
+              <tr>
+                <td scope="row">{{ i.SubjectCode }}</td>
+                <td class="Subject-name" >{{ i.SubjectName }}</td>
+                <td>{{ i.Branch }}</td>
+                <td>{{ i.Semester }}</td>
+                
+                <td> <p class="pdf-upload">{{ i.provider }}</p><a href="{{ i.pdf.url }}" download>Download</a></td>
+        
+              </tr>
+              {% endfor %}
+        
+            </tbody>
+        </table>
+      </div>
+
+      <!-- MCA -->
+      <div class="stream-box" id="mca">
+        <h2><i class="fas fa-desktop"></i> MCA Resources</h2>
+        <div class="tabs">
+          <button class="tab-btn" data-target="#mca-exams">Exam Papers</button>
+          <button class="tab-btn" data-target="#mca-notes">Notes</button>
+          <button class="tab-btn" data-target="#mca-quantum">Quantum Papers</button>
+          <button class="cls-btn"><i class="fa-solid fa-square-xmark"></i></button>
+
+        </div>
+
+        <table class="resource-table" id="mca-exams">
+          <thead>
+              <tr>
+                <th scope="col">Subject Code</th>
+                <th scope="col">Subject Name</th>
+                <th scope="col">Course</th>
+                <th scope="col">Semester</th>
+                <th scope="col">PDF & Provider</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in MCAExam_paper1 %}
+    
+              <tr>
+                <td scope="row">{{ i.SubjectCode }}</td>
+                <td class="Subject-name" >{{ i.SubjectName }}</td>
+                <td>{{ i.Branch }}</td>
+                <td>{{ i.Semester }}</td>
+                <td> <p class="pdf-upload">{{ i.provider }}</p><a href="{{ i.pdf.url }}" download>Download</a></td>
+        
+              </tr>
+              {% endfor %}
+            </tbody>
+        </table>
+
+        <table class="resource-table" id="mca-notes">
+          <thead>
+              <tr>
+                <th scope="col">Subject Code</th>
+                <th scope="col">Subject Name</th>
+                <th scope="col">Course</th>
+                <th scope="col">Semester</th>
+                <th scope="col">PDF & Provider</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in MCANotes1 %}
+
+              <tr>
+                <td scope="row">{{ i.SubjectCode }}</td>
+                <td class="Subject-name" >{{ i.SubjectName }}</td>
+                <td>{{ i.Branch }}</td>
+                <td>{{ i.Semester }}</td>
+                <td> <p class="pdf-upload">{{ i.provider }}</p><a href="{{ i.pdf.url }}" download>Download</a></td>
+        
+              </tr>
+              {% endfor %}
+            </tbody>
+        </table>
+
+        <table class="resource-table" id="mca-quantum">
+          <thead>
+              <tr>
+                <th scope="col">Subject Code</th>
+                <th scope="col">Subject Name</th>
+                <th scope="col">Course</th>
+                <th scope="col">Semester</th>
+                <th scope="col">PDF & Provider</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in MCAQuantum1 %}
+
+              <tr>
+                <td scope="row">{{ i.SubjectCode }}</td>
+                <td class="Subject-name" >{{ i.SubjectName }}</td>
+                <td>{{ i.Branch }}</td>
+                <td>{{ i.Semester }}</td>
+                <td> <p class="pdf-upload">{{ i.provider }}</p><a href="{{ i.pdf.url }}" download>Download</a></td>
+        
+              </tr>
+              {% endfor %}
+            </tbody>
+        </table>
+      </div>
+
+      <!-- MBA -->
+      <div class="stream-box" id="mba">
+        <h2><i class="fas fa-briefcase"></i> MBA Resources</h2>
+        <div class="tabs">
+          <button class="tab-btn" data-target="#mba-exams">Exam Papers</button>
+          <button class="tab-btn" data-target="#mba-notes">Notes</button>
+          <button class="tab-btn" data-target="#mba-quantum">Quantum Papers</button>
+          <button class="cls-btn"><i class="fa-solid fa-square-xmark"></i></button>
+
+        </div>
+
+        <table class="resource-table" id="mba-exams">
+          <thead>
+              <tr>
+                <th scope="col">Subject Code</th>
+                <th scope="col">Subject Name</th>
+                <th scope="col">Course</th>
+                <th scope="col">Semester</th>
+                <th scope="col">PDF & Provider</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in MBAExam_paper %}
+        
+              <tr>
+                <td scope="row">{{ i.SubjectCode }}</td>
+                <td class="Subject-name" >{{ i.SubjectName }}</td>
+                <td>{{ i.Branch }}</td>
+                <td>{{ i.Semester }}</td>
+                <td> <p class="pdf-upload">{{ i.provider }}</p><a href="{{ i.pdf.url }}" download>Download</a></td>
+        
+              </tr>
+              {% endfor %}
+            </tbody>
+        </table>
+
+        <table class="resource-table" id="mba-notes">
+          <thead>
+              <tr>
+                <th scope="col">Subject Code</th>
+                <th scope="col">Subject Name</th>
+                <th scope="col">Course</th>
+                <th scope="col">Semester</th>
+                <th scope="col">PDF & Provider</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in MBANotes1 %}
+    
+              <tr>
+                <td scope="row">{{ i.SubjectCode }}</td>
+                <td class="Subject-name" >{{ i.SubjectName }}</td>
+                <td>{{ i.Branch }}</td>
+                <td>{{ i.Semester }}</td>
+                <td> <p class="pdf-upload">{{ i.provider }}</p><a href="{{ i.pdf.url }}" download>Download</a></td>
+        
+              </tr>
+              {% endfor %}
+            </tbody>
+        </table>
+
+        <table class="resource-table" id="mba-quantum">
+          <thead>
+              <tr>
+                <th scope="col">Subject Code</th>
+                <th scope="col">Subject Name</th>
+                <th scope="col">Course</th>
+                <th scope="col">Semester</th>
+                <th scope="col">PDF & Provider</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in MBAQuantum1 %}
+  
+              <tr>
+                <td scope="row">{{ i.SubjectCode }}</td>
+                <td class="Subject-name" >{{ i.SubjectName }}</td>
+                <td>{{ i.Branch }}</td>
+                <td>{{ i.Semester }}</td>
+                <td> <p class="pdf-upload">{{ i.provider }}</p><a href="{{ i.pdf.url }}" download>Download</a></td>
+        
+              </tr>
+              {% endfor %}
+            </tbody>
+                    
+        </table>
+      </div>
+    </div>
+
+    <footer>
+      <h3>StudyDeskPro</h3>
+      <p>© 2025 Rishabh Tyagi. All rights reserved.</p>
+      <div class="social-icons">
+        <i class="fab fa-facebook fa-lg"></i>
+        <i class="fab fa-twitter fa-lg"></i>
+        <i class="fab fa-instagram fa-lg"></i>
+        <i class="fab fa-linkedin fa-lg"></i>
+      </div>
+    </footer>
+
+   <script>
+      $(document).ready(function() {
+        // Search filter functionality
+        $('#search').on('input', function() {
+          var searchTerm = $(this).val().toLowerCase();
+    
+          // Initially hide all tables
+          $('.resource-table').hide();
+    
+          // Loop through all tables and rows
+          $('.resource-table').each(function() {
+            var table = $(this);
+            var hasVisibleRow = false;
+    
+            // Loop through rows in this table
+            table.find('tbody tr').each(function() {
+              var rowText = $(this).text().toLowerCase();
+              if (rowText.indexOf(searchTerm) > -1) {
+                $(this).show(); // Show the row if it matches the search term
+                hasVisibleRow = true; // Mark that this table has a visible row
+              } else {
+                $(this).hide(); // Hide the row if it doesn't match
+              }
+            });
+    
+            // If this table has at least one visible row, show the table
+            if (hasVisibleRow) {
+              table.show();
+            }
+          });
+        });
+    
+        // Tabs functionality (switching between exam, notes, and quantum papers)
+        $('.tabs button').click(function() {
+          const container = $(this).closest('.stream-box');
+          container.find('.tab-btn').removeClass('active');
+          $(this).addClass('active');
+          container.find('.resource-table').hide();
+          container.find($(this).data('target')).fadeIn();
+    
+          $(".cls-btn").click(function() {
+            container.find('.resource-table').hide();
+          });
+        });
+      });
+    </script>
+  
+    
+    
+ 
+ 
+ 
+ 
+  </body>
+  </html>
