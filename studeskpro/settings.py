@@ -146,4 +146,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'rishabtyagi55@gmail.com'
-EMAIL_HOST_PASSWORD = 'rvdp qhqf nwvg aqog'  # Not your Gmail password!
+EMAIL_HOST_PASSWORD = '#'  # Not your Gmail password!
